@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.mementoapp.main.mementoapp.RecognizeActivity">
+
+    <Button
+        android:id="@+id/btn_RecognizeActivity_Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="291dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_RecognizeActivity_CameraPhoto"
+        android:layout_width="272dp"
+        android:layout_height="286dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@+id/btn_RecognizeActivity_Camera"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_RecognizeActivity_Camera"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/listView_RecognizeActivity"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/btn_RecognizeActivity_RecognizeFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/face"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/listView_RecognizeActivity"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/imageView_RecognizeActivity_CameraPhoto"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/btn_RecognizeActivity_RecognizeObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/object"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView_RecognizeActivity" />
+
+    <ImageView
+        android:id="@+id/imageView_RecognizeActivity_Selected"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginStart="7dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_RecognizeActivity_Medication"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_RecognizeActivity_MementoData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/message_will_be_here"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView_RecognizeActivity_Selected"
+        app:layout_constraintLeft_toRightOf="@+id/imageView_RecognizeActivity_Selected" />
+
+    <ListView
+        android:id="@+id/listView_RecognizeActivity"
+        android:layout_width="307dp"
+        android:layout_height="267dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_RecognizeActivity_CameraPhoto"
+        app:layout_constraintRight_toRightOf="@+id/btn_RecognizeActivity_RecognizeObject"
+        android:layout_marginTop="4dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_RecognizeActivity_RecognizeFace"
+        app:layout_constraintTop_toTopOf="@+id/imageView_RecognizeActivity_CameraPhoto"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtLBL_RecognizeActivity_Medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medication"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/autoCompleteTextView_RecognizeActivity_MedicationName"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:labelFor="@+id/autoCompleteTextView_RecognizeActivity_MedicationName"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView_RecognizeActivity_MedicationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/medication_name"
+        android:minEms="10"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="7dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/txtLBL_RecognizeActivity_Medication"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="99dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_RecognizeActivity_CameraPhoto"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_RecognizeActivity_Selected"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/btn_RecognizeActivity_Medication"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_RecognizeActivity_Medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medication"
+        android:layout_marginStart="11dp"
+        app:layout_constraintLeft_toRightOf="@+id/txtLBL_RecognizeActivity_Medication"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="63dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_RecognizeActivity_RecognizeFace"
+        app:layout_constraintHorizontal_bias="0.58" />
+
+
+</android.support.constraint.ConstraintLayout>

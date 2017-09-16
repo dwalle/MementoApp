@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"  
+    tools:context="com.mementoapp.main.mementoapp.ManageSpecificMedicationActivity">
+
+    <EditText
+        android:id="@+id/tf_ManageSpecficMedication_Name"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/medication_name"
+        app:layout_constraintRight_toLeftOf="@+id/btn_ManageSpecficMedication_Camera"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_ManageSpecficMedication_Camera"
+        tools:layout_constraintBaseline_creator="1" />
+
+    <ImageView
+        android:id="@+id/imageView_ManageSpecficMedication"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/tf_ManageSpecficMedication_Name"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="79dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="29dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ManageSpecficMedication_Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="51dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tf_ManageSpecficMedication_Instructions"
+        android:layout_width="0dp"
+        android:layout_height="193dp"
+        android:ems="10"
+        android:hint="@string/enter_medicine_instructions"
+        android:inputType="textMultiLine"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="76dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_ManageSpecficMedication_Update"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="98dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="87dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/tf_ManageSpecficMedication_Name" />
+
+    <Button
+        android:id="@+id/btn_ManageSpecficMedication_Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.9" />
+
+    <TextView
+        android:id="@+id/textView_labelInstructions"
+        android:layout_width="144dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/instructions"
+        android:labelFor="@+id/editText_ManageSpecficMedication_Instructions"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tf_ManageSpecficMedication_Instructions"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf_ManageSpecficMedication_Name"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_ManageSpecficMedication_message"
+        android:layout_width="186dp"
+        android:layout_height="29dp"
+        android:text="@string/message_will_be_here"
+        android:textSize="18sp"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="45dp" />
+
+    <Button
+        android:id="@+id/btn_ManageSpecficMedication_Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="203dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView_ManageSpecficMedication_message"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="203dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tf_ManageSpecficMedication_Instructions"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintVertical_bias="0.43"
+        android:layout_marginStart="8dp" />
+
+</android.support.constraint.ConstraintLayout>

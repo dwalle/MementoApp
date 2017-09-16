@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mementoapp.main.mementoapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mementoapp.main.mementoapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManageMementosActivity"
+            android:label="@string/manage_mementos"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ManagePeopleActivity"
+            android:label="@string/update_people"
+            android:parentActivityName=".ManageMementosActivity" />
+        <activity
+            android:name=".AddNewKairosActivity"
+            android:label="@string/add_new_person"
+            android:parentActivityName=".ManagePeopleActivity" />
+        <activity
+            android:name=".ManagePersonActivity"
+            android:label="@string/manage_person"
+            android:parentActivityName=".ManagePeopleActivity" />
+        <activity
+            android:name=".AddNewSpecificKairosActivity"
+            android:label="@string/manage_person"
+            android:parentActivityName=".ManagePeopleActivity" />
+        <activity
+            android:name=".ManageMedicationActivity"
+            android:label="@string/manage_medication"
+            android:parentActivityName=".ManageMementosActivity" />
+        <activity
+            android:name=".AddNewMedicationActivity"
+            android:label="@string/add_new_medication"
+            android:parentActivityName=".ManageMedicationActivity" />
+        <activity
+            android:name=".ManageSpecificMedicationActivity"
+            android:label="@string/manage_medication"
+            android:parentActivityName=".ManageMedicationActivity" />
+        <activity
+            android:name=".ManageObjectsActivity"
+            android:label="@string/manage_objects"
+            android:parentActivityName=".ManageMementosActivity" />
+        <activity
+            android:name=".ManageObjectActivity"
+            android:label="@string/manage_object"
+            android:parentActivityName=".ManageObjectsActivity" />
+        <activity
+            android:name=".AddNewObjectActivity"
+            android:label="@string/add_new_object"
+            android:parentActivityName=".ManageObjectsActivity" />
+        <activity
+            android:name=".RecognizeActivity"
+            android:label="@string/help_recognize"
+            android:parentActivityName=".MainActivity"/>
+    </application>
+
+</manifest>

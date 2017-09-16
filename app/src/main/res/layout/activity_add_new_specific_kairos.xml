@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mementoapp.main.mementoapp.AddNewSpecificKairosActivity">
+
+
+    <Button
+        android:id="@+id/btn_ActivityAddNewSpecificKairos_Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="12dp"
+        android:text="@string/camera" />
+
+    <TextView
+        android:id="@+id/txtView_ActivityAddNewSpecificKairos_KairosMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="@string/message_will_be_here"
+        android:layout_above="@+id/btn_ActivityAddNewSpecificKairos_Photo"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_ActivityAddNewSpecificKairos_Enroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_ActivityAddNewSpecificKairos_Photo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:text="@string/enroll" />
+
+    <ImageView
+        android:id="@+id/imageView_ActivityAddNewSpecificKairos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/editText_ActivityAddNewSpecificKairos_PersonName"
+        android:layout_alignStart="@+id/editText_ActivityAddNewSpecificKairos_PersonName"
+        android:layout_above="@+id/txtView_ActivityAddNewSpecificKairos_KairosMessage"
+        android:layout_alignEnd="@+id/btn_ActivityAddNewSpecificKairos_Enroll" />
+
+    <EditText
+        android:id="@+id/editText_ActivityAddNewSpecificKairos_PersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btn_ActivityAddNewSpecificKairos_Photo"
+        android:layout_marginStart="13dp" />
+
+
+</RelativeLayout>
