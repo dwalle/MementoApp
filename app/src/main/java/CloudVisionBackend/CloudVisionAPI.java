@@ -30,7 +30,7 @@ import java.util.Locale;
  */
 
 public class CloudVisionAPI {
-    public static final String CLOUD_VISION_API_KEY = "{ENTER YOUR CLOUD VISION API KEY HERE}";//AIzaSyB8BqEwdXOFoobg3BgbdSQhqirLT073NAk
+    public static final String CLOUD_VISION_API_KEY = "{ENTER YOUR CLOUD VISION API KEY HERE}";
     public static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     public static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
 
