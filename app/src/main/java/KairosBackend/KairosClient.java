@@ -29,8 +29,8 @@ import retrofit2.http.Part;
 public interface KairosClient {
 
     static final String BASE_URL = "https://api.kairos.com/";
-    static String app_id = "{ENTER KAIROS APP ID HERE}";//0d560ae9
-    static String app_key = "{ENTER KAIROS APP KEY HERE}";//7d04ae08da36a7e13d578e45746adff9
+    static String app_id = "{ENTER KAIROS APP ID HERE}";
+    static String app_key = "{ENTER KAIROS APP KEY HERE}";
 
     @Headers({
             "app_id: "+app_id,
